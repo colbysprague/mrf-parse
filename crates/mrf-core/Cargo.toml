@@ -1,0 +1,30 @@
+[package]
+name = "mrf-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+arrow-array = "60.1.0"
+arrow-schema = "60.1.0"
+flate2 = "1.1.11"
+hex = "0.4.3"
+parquet = { version = "60.1.0", default-features = false, features = ["arrow", "snap"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["blocking", "rustls"] }
+sha2 = "0.10.9"
+tempfile = "3"
+thiserror = "2.0.21"
+tracing = "0.1.44"
+zip = { version = "9.4.1", default-features = false, features = ["deflate"] }
+
+[lints]
+workspace = true
+
+[features]
+# Exposes `mrf_core::testutil` (a tiny std-only HTTP server) to other crates' tests.
+test-util = []
+
+[target."cfg(unix)".dependencies]
+nix = { version = "0.31.3", default-features = false, features = ["resource"] }
+

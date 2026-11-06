@@ -1,0 +1,10 @@
+﻿hospital_name,last_updated_on,version,location_name,hospital_address,license_number | NY,type_2_npi,"To the best of its knowledge and belief, this hospital has included all applicable standard charge information.",attester_name,extra_meta
+Edge Hospital,2026-01-01,3.0.0,Edge Main|Edge East,1 A St|2 B St,LIC1,111 | 222,true,Pat Q,whatever
+description,code | 1,code | 1 | type,code|2,code|2|type,standard_charge | gross,standard_charge|discounted_cash,payer_name,plan_name,standard_charge | negotiated_dollar,standard_charge|negotiated_percentage,standard_charge|methodology,my_extra_col
+Office visit,99213,CPT,,,"$1,234.50",$1000,Acme Health,Gold PPO,$800.00,,fee schedule,junk
+Office visit,99213,CPT,,,"$1,234.50",$1000,Beta Ins,HMO,,,,
+Lab,80048,CPT,,,,,Acme Health,Gold PPO,N/A,,fee schedule,
+Malformed,1,CPT,,,1,1,A,B,1,,x,,EXTRA,MORE
+,,,,,,,,,,,,
+,,,,,100,,Acme,PPO,50,,,
+Gross only,0001,RC,,,500,450,,,,,,

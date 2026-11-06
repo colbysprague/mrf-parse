@@ -1,0 +1,5 @@
+hospital_name,last_updated_on,as_of_date,version,license_number|WI
+Extra Cols Hospital,2026-06-27,2026-03-01,3.0.0,123
+description,code|1,code|1|type,standard_charge|gross,payer_name,plan_name,standard_charge|negotiated_dollar,count,count_of_compared_rates,footnote,footnote
+Office visit,99213,CPT,200,Acme,PPO,150,0,17,Subject to stoploss,Second note
+Lab,80048,CPT,50,Acme,PPO,40,,,,

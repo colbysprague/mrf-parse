@@ -1,0 +1,48 @@
+{
+  "reporting_entity_name": "Edge Payer",
+  "reporting_entity_type": "health insurance issuer",
+  "plan_name": "Edge PPO",
+  "plan_id_type": "hios",
+  "plan_id": "1234567890",
+  "plan_market_type": "individual",
+  "last_updated_on": "2026-01-01",
+  "version": "1.0.0",
+  "in_network": [
+    {
+      "negotiation_arrangement": "ffs", "name": "Office visit", "billing_code_type": "CPT",
+      "billing_code_type_version": "2026", "billing_code": "99213", "description": "Est patient",
+      "negotiated_rates": [
+        {"provider_references": [1, 2], "negotiated_prices": [
+          {"negotiated_type": "negotiated", "negotiated_rate": 100.5, "expiration_date": "9999-12-31",
+           "billing_class": "professional", "setting": "outpatient", "service_code": ["11", "22"], "billing_code_modifier": ["25"]},
+          {"negotiated_type": "percentage", "negotiated_rate": 80, "expiration_date": "9999-12-31",
+           "billing_class": "institutional", "setting": "both"}
+        ]},
+        {"provider_groups": [{"npi": [7777777777], "tin": {"type": "ein", "value": "77-7777777"}}],
+         "negotiated_prices": [{"negotiated_type": "fee schedule", "negotiated_rate": 55, "expiration_date": "9999-12-31", "billing_class": "professional", "setting": "outpatient", "service_code": "11"}]},
+        {"provider_references": [99], "negotiated_prices": [{"negotiated_type": "derived", "negotiated_rate": 1, "expiration_date": "9999-12-31", "billing_class": "professional", "setting": "outpatient"}]},
+        {"provider_references": [1], "negotiated_prices": [{"negotiated_type": "per diem", "expiration_date": "9999-12-31", "billing_class": "institutional", "setting": "inpatient"}]},
+        {"provider_references": [1]}
+      ]
+    },
+    42,
+    {
+      "negotiated_rates": [
+        {"provider_references": [2], "negotiated_prices": [{"negotiated_type": "per diem", "negotiated_rate": 2500, "expiration_date": "9999-12-31", "billing_class": "institutional", "setting": "inpatient"}]}
+      ],
+      "negotiation_arrangement": "ffs", "name": "Room and board", "billing_code_type": "RC",
+      "billing_code_type_version": "2026", "billing_code": "0120", "description": "Semi-private room"
+    },
+    {
+      "negotiation_arrangement": "ffs", "name": "No code", "billing_code_type": "CPT",
+      "billing_code_type_version": "2026", "description": "missing billing_code",
+      "negotiated_rates": [{"provider_references": [1], "negotiated_prices": [{"negotiated_type": "negotiated", "negotiated_rate": 9, "expiration_date": "9999-12-31", "billing_class": "professional", "setting": "outpatient"}]}]
+    }
+  ],
+  "provider_references": [
+    {"provider_group_id": 1, "network_name": ["Edge Net"], "provider_groups": [
+      {"npi": [1111111111, 2222222222], "tin": {"type": "ein", "value": "11-1111111"}}]},
+    {"provider_group_id": 2, "provider_groups": [
+      {"npi": [], "tin": {"type": "npi", "value": "3333333333"}}]}
+  ]
+}

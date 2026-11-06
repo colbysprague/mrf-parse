@@ -1,0 +1,23 @@
+{
+  "standard_charge_information": [
+    {"description": "Office visit", "code_information": [{"code": 99213, "type": "CPT"}],
+     "standard_charges": [{"setting": "outpatient", "gross_charge": "$1,234.50", "discounted_cash": 1000,
+       "payers_information": [{"payer_name": "Acme Health", "plan_name": "Gold PPO", "methodology": "fee schedule", "standard_charge_dollar": 800}]}]},
+    42,
+    {"code_information": [], "standard_charges": []},
+    {"description": "Lab", "code_information": [{"code": "80048", "type": "CPT"}],
+     "standard_charges": [{"setting": "outpatient", "gross_charge": "N/A", "modifier_code": ["50", "62"],
+       "payers_information": [{"payer_name": "Acme Health", "plan_name": "Gold PPO", "methodology": "fee schedule", "standard_charge_dollar": 75}]}]},
+    {"description": "No charges key", "code_information": [{"code": "1", "type": "RC"}]},
+    {"description": "Gross only", "code_information": [{"code": "0001", "type": "RC"}],
+     "standard_charges": [{"setting": "inpatient", "gross_charge": 500}]}
+  ],
+  "hospital_name": "Edge JSON Hospital",
+  "last_updated_on": "2026-01-01",
+  "version": "3.0.0",
+  "location_name": ["Edge Main"],
+  "hospital_address": ["1 A St"],
+  "license_information": {"state": "NY"},
+  "type_2_npi": ["111"],
+  "attestation": {"attestation": "To the best of its knowledge...", "confirm_attestation": true, "attester_name": "Pat Q"}
+}

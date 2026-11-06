@@ -1,0 +1,28 @@
+[package]
+name = "mrf-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "mrf"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+arrow-array = "60.1.0"
+clap = { version = "4.6.7", features = ["derive"] }
+mrf-core = { path = "../mrf-core" }
+mrf-hospital = { path = "../mrf-hospital" }
+mrf-tic = { path = "../mrf-tic" }
+rayon = "1.12.0"
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt"] }
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+tempfile = "3"
+zip = { version = "9.4.1", default-features = false, features = ["deflate"] }
